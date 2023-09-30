@@ -24,22 +24,28 @@ class GFG {
 
 class Solution {
     int isPalindrome(String S) {
-        
+        // code here
         int i = 0;
         int j = S.length() - 1;
-         
-        while(i < j){
         
-        if(S.charAt(i) != S.charAt(j))
-        return 0;
-        
-        else{
-            i++;
-            j--;
+        while (i<j){
+            
+            if (S.charAt(i) != S.charAt(j)){
+                return 0;
+            }
+            else{
+                i++;
+                j--;
+            }
         }
-       
-      
+        return 1;
     }
-     return 1;
-}
-}
+};
+
+/*
+Can also be done by half a loop
+int n = S.length();
+for (int i = 0; i<n/2; i++)
+if(S.charAt(i) != S.charAt(n - 1 - i))
+return 0;
+*/
